@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+
+      background: radial-gradient(circle at top, #23493f 0%, #1b3b32 70%, #0f1f1a 100%);
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #111;
+      padding: 12px 0;
+      border-bottom: 1px solid #00f0b5;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+      margin-bottom: 30px;
+    }
+    nav ul {
+      display:flex;
+      justify-content:center;
+      gap:24px;
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    nav ul li a {
+      color:white;
+      font-size:18px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.2s;
+    }
+    nav ul li a:hover {
+      color:#00f0b5;
+      text-shadow:0 0 8px #00f0b5;
+    }
+
+    /* SAYFA BAŞLIĞI */
+    h1 {
+      text-align:center;
+      color:#00f0b5;
+      text-shadow:0 0 10px rgba(0,255,200,0.4);
+      margin-bottom: 28px;
+      font-size: 42px;
+      letter-spacing: 1px;
+    }
+
+    /* GAME BUTTON GRID */
+    .games-container {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .game-btn {
+      width: 260px;
+      padding: 18px 24px;
+      text-align:center;
+      background: rgba(0,0,0,0.45);
+      border-radius: 12px;
+      border: 2px solid transparent;
+      color: #9fffe0;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      display: block;
+
+      transition: .25s ease;
+      letter-spacing: 0.5px;
+
+      box-shadow: 0 0 10px rgba(0,255,200,0.12);
+    }
+
+    .game-btn:hover {
+      color: white;
+      border-color: #00f0b5;
+      box-shadow: 0 0 16px rgba(0,255,200,0.35);
+      transform: translateY(-3px);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="play.html">Play</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="password.html">Tools</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<h1>Games</h1>
+
+<div class="games-container">
+
+  <a href="game1/index.html" class="game-btn">
+    Game 1
+  </a>
+
+  <a href="game2/index.html" class="game-btn">
+    Game 2
+  </a>
+
+</div>
+
+</body>
+</html>

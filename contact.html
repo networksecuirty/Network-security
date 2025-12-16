@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Article Request Form</title>
+
+  <style>
+
+   
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #23493f 0%, #1b3b32 70%, #0f1f1a 100%);
+      background-attachment: fixed;
+      color: #e6eef8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px;
+      padding-top: 120px; 
+    }
+
+   
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+  
+    nav {
+      background: #111;
+      padding: 12px 0;
+      border-bottom: 1px solid #00f0b5;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+      position: fixed;
+      top: 0; 
+      left: 0; 
+      right: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00f0b5;
+      text-shadow: 0 0 8px #00f0b5;
+    }
+
+    
+    form {
+      background: rgba(0, 0, 0, 0.35);
+      border-left: 4px solid #00f0b5;
+      padding: 24px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: 2;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00f0b5;
+      text-shadow: 0 0 10px rgba(0,255,200,0.6);
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      color: #9fffe0;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(0,0,0,0.25);
+      color: white;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 12px;
+      width: 100%;
+      padding: 12px;
+      background: #00f0b5;
+      color: #111;
+      border: none;
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #11ffd0;
+      box-shadow: 0 0 12px rgba(0,255,200,0.4);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="play.html">Play</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="password.html">Tools</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <h2>Article Request Form</h2>
+
+  <form action="/submit-request" method="post">
+    
+    <label for="name">Name Surname:</label>
+    <input type="text" id="name" name="name" required>
+
+    <br><br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br><br>
+
+    <label for="details">Note:</label>
+    <textarea id="details" name="details" rows="4" required></textarea>
+
+    <button type="submit">Send</button>
+
+  </form>
+
+</body>
+</html>
